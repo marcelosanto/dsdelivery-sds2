@@ -2,15 +2,25 @@ package com.devsuperior.dsdelivery.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_product")
 public class Product implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private Double price;
 	private String description;
-	private String imageUrl;
+	private String imageUri;
 	
 	public Product() {}
 
@@ -20,7 +30,7 @@ public class Product implements Serializable {
 		this.name = name;
 		this.price = price;
 		this.description = description;
-		this.imageUrl = imageUrl;
+		this.imageUri = imageUri;
 	}
 
 	public Long getId() {
@@ -55,12 +65,12 @@ public class Product implements Serializable {
 		this.description = description;
 	}
 
-	public String getImageUrl() {
-		return imageUrl;
+	public String getImageUri() {
+		return imageUri;
 	}
 
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setImageUri(String imageUri) {
+		this.imageUri = imageUri;
 	}
 
 	@Override
