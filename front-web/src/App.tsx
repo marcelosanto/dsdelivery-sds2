@@ -1,16 +1,8 @@
 import './App.css'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import Navbar from './components/Navbar'
+import Routes from './Routes'
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Home />
-      <Footer />
-    </>
-  )
+  return <Routes />
 }
 
 export default App
