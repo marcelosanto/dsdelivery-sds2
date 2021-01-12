@@ -1,4 +1,3 @@
-import { checkServerIdentity } from 'tls'
 import { checkeSelected } from './helpers'
 import ProductCard from './ProductCard'
 import { Product } from './types'
